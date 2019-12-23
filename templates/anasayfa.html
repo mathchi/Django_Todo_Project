@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>ANASAYFA</h1>
+
+<ul>
+    {% for i in todos %}
+        <li>
+            <a href="/tododetails/{{i.id}}"> {{i.baslik}} - {{i.olusturma_tarihi}} </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="/todoAdd">ADD TODO</a>
+{% endblock %}

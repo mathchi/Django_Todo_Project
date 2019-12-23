@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/">GO BACK</a>
+<form action="{% url 'remove_todo' todo.id %}" method="post">{% csrf_token %}
+<h3>{{todo.baslik}}</h3>
+<h4>{{todo.metin}}</h4>
+<h4>{{todo.id}}</h4>
+<h5>{{todo.olusturma_tarihi}}</h5>    
+
+<input type="submit" value="Delete">
+
+</form>
+{% endblock %}
